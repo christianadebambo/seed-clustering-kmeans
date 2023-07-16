@@ -1,26 +1,45 @@
 # Seed Clustering
 
-Create seed clusters using KMeans
+This repository contains code for clustering seeds using the K-Means algorithm. The goal is to group the seeds in such a way that seeds within the same cluster are similar to each other while seeds in different clusters are distinct.
 
 Dataset taken from [UCI ML Repository](https://archive.ics.uci.edu/dataset/236/seeds)
 
-## Project structure
+## Prerequisites
 
-The project has the following structure:
-- `notebook/`: `.ipynb` Colab-friendly notebook with model training
-- `input/`: input data
-  
+Before running the code, ensure that you have the following libraries installed:
 
-## Working with the repo
+- numpy
+- pandas
+- matplotlib
+- scikit-learn
 
-### Environment
+## Code Explanation
 
-To work with the repo, I recommend creating a virtual environment:
-```
-python3 -m venv myenv
-source myenv/bin/activate
-```
+The code performs the following steps:
 
-### Reproducing solution
+- Imports the necessary libraries for data processing, visualization, and clustering.
+- Loads the seed dataset and assigns appropriate column names.
+- Performs K-Means clustering on the dataset with a specified number of clusters.
+- Updates the cluster labels for better visualization.
+- Calculates the accuracy of the clustering by comparing the predicted labels with the actual labels in the dataset.
+- Performs K-Means clustering on a subset of features (area and length) and visualizes the labels and predictions.
+- Manually implements the K-Means algorithm by defining functions for finding centroids, assigning data points to the nearest centroids, and calculating new centroids based on the assigned data points.
+- Visualizes the clustering results using scatter plots.
+- Creates a Voronoi diagram to visualize the clusters using PCA to reduce the dimensionality of the dataset.
+- Visualizes the seed dataset in high-dimensional space using a 3D scatter plot.
 
-The solution can be reproduced by running the Jupyter notebook
+## Results
+
+The code provides the clustering results and accuracy metrics, allowing you to assess the effectiveness of the K-Means algorithm in grouping similar seeds together. The visualizations help in understanding the clusters and identifying patterns within the dataset.
+
+## Instructions
+
+To run the project code, follow these steps:
+
+- Download the dataset.
+- Install the required dependencies mentioned in the Prerequisites section.
+- Run the code in a Python environment that supports Jupyter notebooks or execute the code in a Python script.
+
+Note: Adjustments may be required in the code paths to ensure proper loading of the dataset.
+
+Happy clustering!
